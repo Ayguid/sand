@@ -1,6 +1,6 @@
 <template>
   <!-- flex items-center h-screen -->
-  <div class="landingStart">
+  <div class="landingStart container mx-auto">
 
     <div class="mainLogo">
       <div class="" data-aos="fade-up" data-aos-delay="100">
@@ -64,6 +64,7 @@ export default {
         -ms-animation: fadein 2s; /* Internet Explorer */
          -o-animation: fadein 2s; /* Opera < 12.1 */
             animation: fadein 2s;
+            
 }
 
 @keyframes fadein {
@@ -101,7 +102,7 @@ export default {
 
 .mainLogo {
   position: absolute;
-  z-index: 100;
+  z-index: 60;
   transform: translateX(-50%) ;
   top: 30%;
   left: 50%;

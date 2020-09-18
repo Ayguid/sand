@@ -1,9 +1,11 @@
 <template>
   <div id="app">
 
-    <NavBar/>
+    <!-- <NavBar/> -->
+    <TopNavBar/>
 
-    <div class="container mx-auto">
+    <!-- container mx-auto -->
+    <div class="">
 
       <section v-for="(link, index) in links" :key="index" :id="link.id">
         <!-- {{link.label}} -->
@@ -44,7 +46,8 @@
 <script>
 
 import linksList from '@/linksList.js'
-import NavBar from './components/NavBar.vue'
+// import NavBar from './components/NavBar.vue'
+import TopNavBar from './components/TopNavBar.vue'
 import Introduction from './components/Introduction.vue'
 import Why from './components/Why.vue'
 import Ecosystem from './components/Ecosystem.vue'
@@ -53,7 +56,8 @@ import TheApp from './components/TheApp.vue'
 export default {
   name: 'App',
   components: {
-    NavBar,
+    // NavBar,
+    TopNavBar,
     Introduction,
     Why,
     Ecosystem,

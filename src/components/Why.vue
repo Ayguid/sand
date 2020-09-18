@@ -129,6 +129,7 @@ export default {
   /* background-attachment: fixed;
   background-position: 50% 38%; */
   position: relative;
+  padding-top: 69px !important;
   /* background-size: cover; */
   /* background-repeat: no-repeat; */
   border-radius: 2px;

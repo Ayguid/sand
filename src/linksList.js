@@ -7,6 +7,7 @@ const links = [ //links.js
     {id: 'Why', label:'Why', icon: ''},
     {id: 'Ecosystem', label:'Ecosystem', icon: ''},
     {id: 'TheBenefits', label:'The Benefits', icon: ''},
+    // {id: '', label:'Arena', icon: ''},
     {id: 'TheApp', label:'The App', icon: ''},
     {id: 'TheCompany', label:'The Company', icon: ''},
     {id: 'Login', label:'Login', icon: ''}
