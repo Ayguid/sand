@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar">
+  <nav id="navbar" class="navbar">
     <ul class="navbar-nav">
       <li class="logo">
         <a href="#" class="nav-link">
@@ -33,6 +33,8 @@ export default {
     }
   },
   mounted: function () {
+
+    //seguidor
     let mainNavLinks = document.getElementsByClassName("nav-link")
     window.addEventListener("scroll", ()=> {
       let fromTop = window.scrollY - 50;
@@ -50,6 +52,20 @@ export default {
         }
       })
     })
+
+    //escondedor
+    document.getElementById("navbar").style.top = "-100px";
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "-100px";
+      } else {
+        document.getElementById("navbar").style.top = "0";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+
   }
 
 }
@@ -68,6 +84,10 @@ export default {
   --transition-speed: 600ms;
 }
 
+#navbar{
+  transition: top 0.3s;
+
+}
 .navbar {
   position: fixed;
   /* background-color: var(--bg-primary); */
