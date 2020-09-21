@@ -2,14 +2,13 @@
   <div id="app">
 
     <!-- <NavBar/> -->
-    <TopNavBar/>
+    <TopNavBar :links="links"/>
 
     <!-- container mx-auto -->
     <div class="">
 
       <section v-for="(link, index) in links" :key="index" :id="link.id">
         <!-- {{link.label}} -->
-
         <!-- Intro section START-->
         <div v-if="link.id == 'Introduction'" class="">
           <Introduction/>
@@ -18,7 +17,8 @@
 
         <!-- Why section START-->
         <div v-if="link.id == 'Why'" class="">
-          <Why/>
+          <!-- <Why/> -->
+          <Why3/>
         </div>
         <!-- Why section END -->
 
@@ -49,7 +49,8 @@ import linksList from '@/linksList.js'
 // import NavBar from './components/NavBar.vue'
 import TopNavBar from './components/TopNavBar.vue'
 import Introduction from './components/Introduction.vue'
-import Why from './components/Why.vue'
+// import Why from './components/Why.vue'
+import Why3 from './components/Why3.vue'
 import Ecosystem from './components/Ecosystem.vue'
 import TheApp from './components/TheApp.vue'
 
@@ -59,7 +60,8 @@ export default {
     // NavBar,
     TopNavBar,
     Introduction,
-    Why,
+    // Why,
+    Why3,
     Ecosystem,
     TheApp
   },

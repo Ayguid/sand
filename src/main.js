@@ -9,6 +9,9 @@ import '@/assets/css/mobirise-icons2/mobirise2.css'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
+import VueCarousel from 'vue-carousel';
+Vue.use(VueCarousel);
+
 import '@/assets/css/gg.css'
 
 Vue.config.productionTip = false

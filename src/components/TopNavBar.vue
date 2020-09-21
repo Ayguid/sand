@@ -40,13 +40,14 @@
 </template>
 
 <script>
-import linksList from '@/linksList.js'
+// import linksList from '@/linksList.js'
 
 export default {
   name: 'NavBar',
+  props:['links'],
   data () {
     return {
-      links:linksList
+      // links:linksList
     }
   },
   mounted: function () {
@@ -60,12 +61,9 @@ export default {
       mainNavLinks.forEach(link => {
         if (link.hash) {
           let section = document.querySelector(link.hash);
-          if (
-            section.offsetTop <= fromTop + 55 &&
-            section.offsetTop + section.offsetHeight > fromTop + 55
-          ) {
+          if (section.offsetTop <= fromTop + 55 && section.offsetTop + section.offsetHeight > fromTop + 55) {
             link.classList.add("current");
-          } else if (window.pageYOffset ==0) {
+          } else if (window.pageYOffset == 0) {
             bar.style.top = "-96px";
           } else {
             bar.style.top = "0px";
@@ -74,43 +72,7 @@ export default {
         }
       })
 
-
     }
-
-
-    // var prevScrollpos = window.pageYOffset;
-    // window.onscroll = function() {
-    //   // styleNavBar()
-    //   var currentScrollPos = window.pageYOffset;
-    //   if (prevScrollpos > currentScrollPos || window.pageYOffset ==0) {
-    //     bar.style.top = "0";
-    //   } else {
-    //     bar.style.top = "-96px";
-    //   }
-    //   prevScrollpos = currentScrollPos;
-    // };
-    //
-    //
-    // let mainNavLinks = document.getElementsByClassName("nav-link")
-    // window.addEventListener("scroll", ()=> {
-    //   let fromTop = window.scrollY - 50;
-    //   mainNavLinks.forEach(link => {
-    //     if (link.hash) {
-    //       let section = document.querySelector(link.hash);
-    //       if (
-    //         section.offsetTop <= fromTop + 55 &&
-    //         section.offsetTop + section.offsetHeight > fromTop + 55
-    //       ) {
-    //         link.classList.add("current");
-    //       } else {
-    //         link.classList.remove("current");
-    //       }
-    //     }
-    //   })
-    // })
-
-
-
 
   }
 
