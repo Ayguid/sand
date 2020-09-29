@@ -18,7 +18,7 @@
         <!-- Why section START-->
         <div v-if="link.id == 'Why'" class="">
           <!-- <Why/> -->
-          <Why3/>
+          <Why2/>
         </div>
         <!-- Why section END -->
 
@@ -50,7 +50,7 @@ import linksList from '@/linksList.js'
 import TopNavBar from './components/TopNavBar.vue'
 import Introduction from './components/Introduction.vue'
 // import Why from './components/Why.vue'
-import Why3 from './components/Why3.vue'
+import Why2 from './components/Why2.vue'
 import Ecosystem from './components/Ecosystem.vue'
 import TheApp from './components/TheApp.vue'
 
@@ -61,7 +61,7 @@ export default {
     TopNavBar,
     Introduction,
     // Why,
-    Why3,
+    Why2,
     Ecosystem,
     TheApp
   },

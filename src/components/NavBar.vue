@@ -74,7 +74,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style >
 :root {
-  font-size: 16px;
+  font-size: 16px !important;
   font-family: 'Open Sans';
   --text-primary: #b6b6b6;
   --text-secondary: #ececec;
